@@ -1,13 +1,13 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import Navbar from '@/components/navbar'
-import Footer from '@/components/footer'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Koraebi',
-  description: 'Portfolio',
+  description: 'Building digital products according to UX fundamentals and Software Engineering principles.',
 }
 
 export default function RootLayout({
@@ -16,12 +16,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="grid min-h-screen">
-      <Navbar/>
-      <body className={inter.className}>
-        {children}
+    <html lang="en">
+      <body className="flex flex-col min-h-screen">
+        <Navbar/>
+        <div className={inter.className}>
+          {children}
+        </div>
+        <Footer/>
       </body>
-      <Footer/>
-    </div>
+    </html>
   )
 }
