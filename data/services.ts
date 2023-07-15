@@ -11,7 +11,7 @@ export const ProfessionalServices: ProfessionalService[] = [
     },
     remoteOnly: true,
     period: ['shortTerm'],
-    proficiencies: ['Shopify', 'Wix', 'Google Site', 'Adobe Commerce (Magento)'],
+    proficiencies: ['Shopify', 'Wix', 'Google Site'],
     section: 'freelance'
   },
   {
@@ -91,7 +91,7 @@ export const ProfessionalServices: ProfessionalService[] = [
     },
     remoteOnly: false,
     period: ['shortTerm', 'longTerm'],
-    proficiencies: ['React Native', 'NativeBase', 'NativeWind', 'Flutter', 'SQLite'],
+    proficiencies: ['React Native', 'NativeBase', 'NativeWind', 'Realm'],
     section: 'employee'
   },
   {
