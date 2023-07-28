@@ -10,11 +10,11 @@ I invite you to explore this portfolio, delve into the intricacies of the codeba
 ## Learn More
 
 This project uses [Tailwind](https://tailwindcss.com/docs/guides/nextjs) as CSS framework.
-No UI framework has been used in this project in order to showcase coding skills to build UI components from scratch.
+No UI framework has been used in this project in order to showcase my coding skills to build UI components from scratch.
 Internationalization has been implemented for English and French with [next-intl](https://next-intl-docs.vercel.app/docs/getting-started/app-router-server-components).
 
 ## Deployment
 
 The project deployment is seamlessly automated through Google Cloud Platform, utilizing Cloud Run and Cloud Build, directly from the source GitHub repository. This streamlined process ensures efficient and reliable deployment, reflecting my proficiency in leveraging cutting-edge cloud technologies for seamless project management.
 
-Open [http://www.koraebi.com](http://www.koraebi.com) with your browser to see the result.
+Open [https://www.koraebi.com](https://www.koraebi.com) with your browser to see the result.
