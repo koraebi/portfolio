@@ -49,17 +49,17 @@ export const ProfessionalServices: ProfessionalService[] = [
     locations: ['france', 'switzerland', 'dubai'],
     prices: {
       france: {
-        price: 50000,
+        price: 45000,
         type: 'year',
         currency: '€'
       },
       switzerland: {
-        price: 80000,
+        price: 75000,
         type: 'year',
         currency: 'CHF'
       },
       dubai: {
-        price: 20000,
+        price: 15000,
         type: 'month',
         currency: 'AED'
       }
@@ -84,14 +84,14 @@ export const ProfessionalServices: ProfessionalService[] = [
         currency: 'CHF'
       },
       dubai: {
-        price: 15000,
+        price: 12000,
         type: 'month',
         currency: 'AED'
       }
     },
     remoteOnly: false,
     period: ['shortTerm', 'longTerm'],
-    proficiencies: ['React Native', 'NativeBase', 'NativeWind', 'Realm'],
+    proficiencies: ['React Native', 'NativeBase', 'NativeWind', 'Realm', 'Firebase'],
     section: 'employee'
   },
   {

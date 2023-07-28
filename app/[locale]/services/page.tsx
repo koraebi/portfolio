@@ -56,7 +56,7 @@ export default function Services() {
               <p className="text-xs">
                 {t('location')}
               </p>
-              <p className="flex justify-evenly">
+              <p className="flex justify-evenly gap-2">
                 {service.locations.map((country, index) => (
                   <span 
                     key={index} 
