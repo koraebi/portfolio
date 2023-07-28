@@ -41,7 +41,7 @@ export const ProfessionalServices: ProfessionalService[] = [
     },
     remoteOnly: false,
     period: ['shortTerm', 'longTerm'],
-    proficiencies: ['React.js', 'MUI', 'Vue.js', 'VUX', 'Tailwind CSS'],
+    proficiencies: ['React.js / MUI', 'Vue.js / VUX', 'Tailwind CSS'],
     section: 'freelance'
   },
   {
@@ -66,7 +66,7 @@ export const ProfessionalServices: ProfessionalService[] = [
     },
     remoteOnly: false,
     period: ['shortTerm', 'longTerm'],
-    proficiencies: ['React.js', 'MUI', 'Vue.js', 'VUX', 'Tailwind CSS', 'Node.js', 'Next.js', 'Express.js', 'NestJS', 'MongoDB', 'Redis', 'GCP'],
+    proficiencies: ['React.js / Next.js / MUI', 'Vue.js / Nuxt.js / VUX', 'Tailwind CSS', 'Express.js', 'NestJS', 'MongoDB', 'Redis', 'GCP'],
     section: 'employee'
   },
   {

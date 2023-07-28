@@ -27,8 +27,8 @@
 
   "about": {
     "about": "À Propos",
-    "aboutSubtitle1": "Je suis Ingénieur en Développement Logiciel français",
-    "aboutSubtitle2": "spécialisé en Interaction Homme-Machine.",
+    "aboutSubtitle1": "Je suis Sabri, un ingénieur français en développement informatique ",
+    "aboutSubtitle2": "spécialisé en Interaction Homme-Machine (IHM).",
     "aboutDescription1": "Diplômé depuis 2022 après un retour aux études, ",
     "aboutDescription2": "j'ai travaillé pendant 4 ans dans l'industrie logicielle ",
     "aboutDescription3": "en tant que développeur Web et Mobile. Actuellement, ",
@@ -48,7 +48,7 @@
     "skillEngineer4": "- Déploiement sur le Cloud (GCP, Cloud Build/Run, Firebase)",
     "skillEngineer5": "- Développement Mobile (React Native, NativeWind, NativeBase, Realm)",
     "skillEngineer6": "- Développement Front-end (React.js, MUI, Vue.js, VUX, Tailwind CSS)",
-    "skillEngineer7": "- Développement Back-end (Node.js, Next.js, Express.js, NestJS, MongoDB, Redis)",
+    "skillEngineer7": "- Développement Back-end (Next.js, Nuxt.js, Express.js, NestJS, MongoDB, Redis)",
     "skillEngineer8": "- Intégration de services de Paiement/E-mail (Checkout, Datatrans, SendGrid, MailTrap)",
     "partDesigner": "Partie Designer",
     "referenceDesigner1": "- Interaction Homme-Machine (Google Scholar, IEEE Xplore, ResearchGate)",
