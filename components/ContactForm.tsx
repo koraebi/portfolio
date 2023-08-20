@@ -1,16 +1,17 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
+import React, { useState, useRef, useEffect, ChangeEvent, FormEvent } from 'react';
 
 export default function ContactForm() {
   const t = useTranslations('contact');
 
-  const [name, setName] = useState('');
-  const [lockSubject, setLockSubject] = useState(false);
-  const [from, setFrom] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+  const nameRef = useRef<HTMLInputElement>(null);
+  const fromRef = useRef<HTMLInputElement>(null);
+  const subjectRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  const [defaultSubject, setDefaultSubject] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -21,16 +22,9 @@ export default function ContactForm() {
     .split('_');
 
     if (params.length === 2) {
-      setSubject(`${params[0]} (${params[1]})`);
-      setLockSubject(true);
+      setDefaultSubject(`${params[0]} (${params[1]})`);
     }
   }, [])
-
-  const onSubjectChange = (subject: string) => {
-    if (!lockSubject) {
-      setSubject(subject);
-    }
-  };
 
   const submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -45,8 +39,8 @@ export default function ContactForm() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-          subject,
-          message: message + `\n\n${name}.\n${from}`
+          subject: subjectRef.current,
+          message: messageRef.current + `\n\n${nameRef.current}.\n${fromRef.current}`
         }),
       });
 
@@ -60,6 +54,7 @@ export default function ContactForm() {
   return (
     <form className="flex flex-col w-full space-y-2" onSubmit={submit}>
       <input
+        ref={nameRef}
         id="name"
         className="border-2	rounded-lg p-2"
         type="name"
@@ -67,9 +62,9 @@ export default function ContactForm() {
         autoComplete="name"
         required
         placeholder={t('name')}
-        onChange={(event: ChangeEvent<HTMLInputElement>) => setName(event.target.value)}
       />
       <input
+        ref={fromRef}
         id="from"
         className="border-2	rounded-lg p-2"
         type="email"
@@ -77,9 +72,9 @@ export default function ContactForm() {
         autoComplete="email"
         required
         placeholder={t('email')}
-        onChange={(event: ChangeEvent<HTMLInputElement>) => setFrom(event.target.value)}
       />
       <input
+        ref={subjectRef}
         id="subject"
         className="border-2	rounded-lg p-2"
         type="subject"
@@ -87,17 +82,16 @@ export default function ContactForm() {
         autoComplete="subject"
         required
         placeholder={t('subject')}
-        value={subject}
-        readOnly={lockSubject}
-        onChange={(event: ChangeEvent<HTMLInputElement>) => onSubjectChange(event.target.value)}
+        defaultValue={defaultSubject}
+        readOnly={!!defaultSubject}
       />
       <textarea 
+        ref={messageRef}
         id="message" 
         name="message" 
         placeholder={t('message')} 
         className="border-2 rounded-lg p-2" 
         rows={5}
-        onChange={(event: ChangeEvent<HTMLTextAreaElement>) => setMessage(event.target.value)}
       >
       </textarea>
       <button 
