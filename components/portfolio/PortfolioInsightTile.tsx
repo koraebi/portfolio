@@ -1,9 +1,10 @@
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 type Props = {
   name: string, 
   picture: string, 
-  categories: string[], 
+  categories: PortfolioCategory[], 
   skills: string[],
   description: string,
   onClick: () => void
@@ -17,6 +18,8 @@ export default function PortfolioInsightTile({
     description,
     onClick,
   }: Props) {
+    const t = useTranslations('portfolio');
+    
   return (
     <div 
       className="
@@ -35,9 +38,9 @@ export default function PortfolioInsightTile({
             {name}
           </h1>
           <p className="font-semibold line-clamp-1">
-            {categories.map((category: string, index: number) => (
-              <span key={index}>
-                {category}{index !== categories.length - 1 && ' • '}
+            {categories.map((category: PortfolioCategory, index: number) => (
+              <span key={category.id}>
+                {t(category.id)}{index !== categories.length - 1 && ' • '}
               </span>
             ))}
           </p>

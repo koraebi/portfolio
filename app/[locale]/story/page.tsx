@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import PageLayout from '@/layouts/PageLayout';
+import { AboutSection, SectionText } from '@/components/AboutSection';
 import picturePartDesigner from '/public/partDesigner.png';
 import picturePartEngineer from '/public/partEngineer.png';
 
@@ -16,29 +17,30 @@ export default function Story() {
           &lt;- {t('returnButton')}
         </button>
       </a>
-      <div className="flex flex-col lg:grid lg:grid-cols-3 lg:p-10 lg:gap-10 place-items-center">
+
+      <AboutSection reverse={false}>
         <Image 
-          className="object-contain mb-5 lg:mb-0 h-[200px] lg:h-[400px] w-full drop-shadow-lg" 
+          className="object-contain mb-5 lg:mb-0 h-[200px] lg:h-[400px] w-auto drop-shadow-lg justify-self-end" 
           src={picturePartEngineer} 
           alt=""
         />
-        <section className="col-span-2 ml-auto">
+        <SectionText position="start">
           <h1 className="font-extrabold mb-1 lg:mb-2 text-2xl lg:text-5xl text-center lg:text-left">
             {t('background')}
           </h1>
           <p className="font-light mb-2 text-center lg:text-left">
             {t('backgroundStory')}
           </p>
-        </section>
-      </div>
+        </SectionText>
+      </AboutSection>
+
       <hr className="h-px my-8 bg-gray-200 border-0"/>
-      <div className="flex flex-col-reverse lg:grid lg:grid-cols-3 lg:p-10 lg:gap-10 place-items-center">
-        <section className="col-span-2 w-full text-center lg:text-left">
-          <div>
-            <h1 className="font-extrabold mb-1 lg:mb-2 text-2xl lg:text-5xl">
-              {t('milestones')}
-            </h1>
-          </div>
+
+      <AboutSection reverse={true}>
+        <SectionText position="end">
+          <h1 className="font-extrabold mb-1 lg:mb-2 text-2xl lg:text-5xl">
+            {t('milestones')}
+          </h1>
           <p className="font-light mb-1 lg:mb-2">
             {t('milestone1')}
           </p>
@@ -51,21 +53,23 @@ export default function Story() {
           <p className="font-light mb-1 lg:mb-2">
             {t('milestone4')}
           </p>
-        </section>
+        </SectionText>
         <Image 
-          className="object-contain mb-5 lg:mb-0 h-[200px] lg:h-[400px] w-full drop-shadow-lg" 
+          className="object-contain mb-5 lg:mb-0 h-[200px] lg:h-[400px] w-auto drop-shadow-lg" 
           src={picturePartDesigner} 
           alt=""
         />
-      </div>
+      </AboutSection>
+
       <hr className="h-px my-8 bg-gray-200 border-0"/>
-      <div className="flex flex-col lg:grid lg:grid-cols-3 lg:p-10 lg:gap-10 place-items-center">
+
+      <AboutSection reverse={false}>
         <Image 
-          className="object-contain mb-5 lg:mb-0 h-[200px] lg:h-[400px] w-full drop-shadow-lg" 
+          className="object-contain mb-5 lg:mb-0 h-[200px] lg:h-[400px] w-auto drop-shadow-lg justify-self-end" 
           src={picturePartEngineer} 
           alt=""
         />
-        <section className="col-span-2 ml-auto text-center lg:text-left">
+        <SectionText position="start">
           <h1 className="font-extrabold mb-1 lg:mb-2 text-2xl lg:text-5xl">
             {t('aspirations')}
           </h1>
@@ -78,8 +82,8 @@ export default function Story() {
           <p className="font-light">
             {t('aspiration3')}
           </p>
-        </section>
-      </div>
+        </SectionText>
+      </AboutSection>
     </PageLayout>
   )
 }

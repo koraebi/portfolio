@@ -4,13 +4,13 @@ export const Categories: PortfolioCategory[] = [
     picture: '',
     background: 'bg-indigo-300',
     section: 'projects',
-  },
+  },/*
   {
     id: 'uxEngineering',
     picture: '',
     background: 'bg-purple-300',
     section: 'projects',
-  },
+  },*/
   {
     id: 'uxUiDesign',
     picture: '',
@@ -28,13 +28,13 @@ export const Categories: PortfolioCategory[] = [
     picture: '',
     background: 'bg-blue-300',
     section: 'projects',
-  },
+  },/*
   {
     id: 'apiDevelopment',
     picture: '',
     background: 'bg-orange-300',
     section: 'projects',
-  },
+  },*/
   {
     id: 'gameDevelopment',
     picture: '',
@@ -68,6 +68,24 @@ export const Categories: PortfolioCategory[] = [
 ];
 
 export const Projects: PortfolioProject[] = [
+  {
+    section: 'projects',
+    name: 'This Portfolio',
+    categories: Categories.filter(category => ['webDevelopment'].includes(category.id)),
+    skills: ['React.js', 'Tailwind', 'Next.js', 'GCP'],
+    picture: '',
+    link: 'https://github.com/koraebi/portfolio',
+    description: '',
+  },
+  {
+    section: 'projects',
+    name: 'Real-time Leaderboard',
+    categories: Categories.filter(category => ['webDevelopment', 'apiDevelopment'].includes(category.id)),
+    skills: ['React.js', 'Redux', 'MUI', 'Express.js', 'Socket.IO'],
+    picture: '',
+    link: 'https://github.com/koraebi/ta-leaderboard',
+    description: '',
+  },
   {
     section: 'projects',
     name: 'Togethere',

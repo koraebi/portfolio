@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useReducer } from 'react';
 import { useTranslations } from 'next-intl';
 import PortfolioCategoryTile from '@/components/portfolio/PortfolioCategoryTile';
 import ScrollButton from '@/components/ScrollButton';
@@ -25,7 +25,7 @@ export default function PortfolioCategorySelector({ categories, onCategoryChange
 
   useEffect(() => {
     window.addEventListener('resize', onScroll);
-  });
+  }, []);
 
   useEffect(() => {
     setSelectedCategory('discovery');

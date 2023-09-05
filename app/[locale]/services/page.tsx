@@ -1,6 +1,6 @@
 'use client';
 
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 import PageLayout from '@/layouts/PageLayout';
 import SectionSelector from '@/components/SectionSelector';

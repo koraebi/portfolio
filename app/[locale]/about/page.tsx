@@ -2,6 +2,7 @@
 
 import { useLocale, useTranslations } from 'next-intl';
 import PageLayout from '@/layouts/PageLayout';
+import { AboutSection, SectionText } from '@/components/AboutSection';
 import { ResumeLink } from '@/data/common';
 import Rbr from '@/components/Rbr';
 import Image from 'next/image';
@@ -18,8 +19,8 @@ export default function About() {
 
   return (
     <PageLayout>
-      <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 lg:p-10 lg:gap-10 place-items-center">
-        <section className="w-full text-center lg:text-left">
+      <AboutSection reverse={true}>
+        <SectionText position="end">
           <h1 className="font-extrabold mb-1 lg:mb-2 text-2xl lg:text-5xl">
             {t('about')}
           </h1>
@@ -33,26 +34,32 @@ export default function About() {
             {t('aboutDescription3')}<Rbr/>
             {t('aboutDescription4')}
           </p>
-          <a href={ResumeLink[locale]} target="_blank">
-            <button className="rounded-full bg-lightBlack p-2 px-4 text-white">
+          <a 
+            className="w-fit place-self-center lg:place-self-start" 
+            href={ResumeLink[locale]} 
+            target="_blank"
+          >
+            <button className="rounded-full bg-lightBlack text-white rounded-full bg-lightBlack p-2 px-4 text-white">
               {t('aboutButton')}
             </button>
           </a>
-        </section>
+        </SectionText>
         <Image 
           className="object-contain mb-5 lg:mb-0 h-[200px] lg:h-[350px] w-auto drop-shadow-lg" 
           src={pictureMeBoat} 
           alt=""
         />
-      </div>
+      </AboutSection>
+
       <hr className="h-px my-8 bg-gray-200 border-0"/>
-      <div className="flex flex-col lg:grid lg:grid-cols-3 lg:p-10 lg:gap-10 place-items-center">
+
+      <AboutSection reverse={false}>
         <Image 
-          className="object-contain mb-5 lg:mb-0 h-[200px] lg:h-[400px] w-full drop-shadow-lg" 
+          className="object-contain mb-5 lg:mb-0 h-[200px] lg:h-[400px] w-auto drop-shadow-lg justify-self-end" 
           src={picturePartEngineer}
           alt=""
         />
-        <section className="col-span-2 ml-auto">
+        <SectionText position="start">
           <h1 className="font-extrabold mb-1 lg:mb-2 text-2xl lg:text-5xl text-center lg:text-left">
             {t('partEngineer')}
           </h1>
@@ -79,54 +86,59 @@ export default function About() {
             {t('skillEngineer7')}<br/>
             {t('skillEngineer8')}<br/>
           </p>
-        </section>
-      </div>
+        </SectionText>
+      </AboutSection>
+
       <hr className="h-px my-8 bg-gray-200 border-0"/>
-      <div className="flex flex-col-reverse lg:grid lg:grid-cols-3 lg:p-10 lg:gap-10 place-items-center">
-        <section className="col-span-2 w-full">
-          <div>
-            <h1 className="font-extrabold mb-1 lg:mb-2 text-2xl lg:text-5xl text-center lg:text-left">
+
+      <AboutSection reverse={true}>
+        <SectionText position="end">
+          <div className="lg:text-right">
+            <h1 className="font-extrabold mb-1 lg:mb-2 text-2xl lg:text-5xl text-center lg:text-right">
               {t('partDesigner')}
             </h1>
+            <p className="text-lg">
+              {t('references')}
+            </p>
+            <p className="font-light mb-2">
+              {t('referenceDesigner1')}<br/>
+              {t('referenceDesigner2')}<br/>
+              {t('referenceDesigner3')}<br/>
+              {t('referenceDesigner4')}<br/>
+              {t('referenceDesigner5')}<br/>
+            </p>
+            <p className="text-lg">
+              {t('skills')}
+            </p>
+            <p className="font-light">
+              {t('skillDesigner1')}<br/>
+              {t('skillDesigner2')}<br/>
+              {t('skillDesigner3')}<br/>
+              {t('skillDesigner4')}<br/>
+              {t('skillDesigner5')}<br/>
+              {t('skillDesigner6')}<br/>
+              {t('skillDesigner7')}<br/>
+              {t('skillDesigner8')}<br/>
+            </p>
           </div>
-          <p className="text-lg">
-            {t('references')}
-          </p>
-          <p className="font-light mb-2">
-            {t('referenceDesigner1')}<br/>
-            {t('referenceDesigner2')}<br/>
-            {t('referenceDesigner3')}<br/>
-            {t('referenceDesigner4')}<br/>
-            {t('referenceDesigner5')}<br/>
-          </p>
-          <p className="text-lg">
-            {t('skills')}
-          </p>
-          <p className="font-light">
-            {t('skillDesigner1')}<br/>
-            {t('skillDesigner2')}<br/>
-            {t('skillDesigner3')}<br/>
-            {t('skillDesigner4')}<br/>
-            {t('skillDesigner5')}<br/>
-            {t('skillDesigner6')}<br/>
-            {t('skillDesigner7')}<br/>
-            {t('skillDesigner8')}<br/>
-          </p>
-        </section>
+          
+        </SectionText>
         <Image 
-          className="object-contain mb-5 lg:mb-0 h-[200px] lg:h-[400px] w-full drop-shadow-lg" 
+          className="object-contain mb-5 lg:mb-0 h-[200px] lg:h-[400px] w-auto drop-shadow-lg justify-self-start" 
           src={picturePartDesigner} 
           alt=""
         />
-      </div>
+      </AboutSection>
+
       <hr className="h-px my-8 bg-gray-200 border-0"/>
-      <div className="flex flex-col lg:grid lg:grid-cols-2 lg:p-10 lg:gap-10 place-items-center">
+      
+      <AboutSection reverse={false}>
         <Image 
-          className="object-contain h-[200px] lg:h-[350px] w-full drop-shadow-lg mb-5 lg:mb-0" 
+          className="object-contain h-[200px] lg:h-[350px] mb-5 lg:mb-0 w-auto drop-shadow-lg justify-self-end" 
           src={pictureMeLaptop} 
           alt=""
         />
-        <section className="w-full text-center lg:text-right">
+        <SectionText position="start">
           <h1 className="font-extrabold mb-1 lg:mb-2 text-2xl lg:text-5xl">
             {t('randomFacts')}
           </h1>
@@ -140,11 +152,13 @@ export default function About() {
             {t('randomFact4')}<br/>
             {t('randomFact5')}<br/>
           </p>
-        </section>
-      </div>
+        </SectionText>
+      </AboutSection>
+      
       <hr className="h-px my-8 bg-gray-200 border-0"/>
-      <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 lg:p-10 lg:gap-10 place-items-center">
-        <section className="w-full text-center lg:text-left">
+
+      <AboutSection reverse={true}>
+        <SectionText position="end">
           <h1 className="font-extrabold mb-1 lg:mb-2 text-2xl lg:text-5xl">
             {t('myStory')}
           </h1>
@@ -154,16 +168,18 @@ export default function About() {
           <p className="font-light mb-4">
             {t('myStoryDescription1')}
           </p>
-          <a className="rounded-full bg-lightBlack p-2 px-4 text-white" href="/story">
-            {t('myStoryButton')}
+          <a className="w-fit place-self-center lg:place-self-start" href="/story">
+            <button className="rounded-full bg-lightBlack p-2 px-4 text-white">
+              {t('myStoryButton')}
+            </button>
           </a>
-        </section>
+        </SectionText>
         <Image 
-          className="object-contain h-[200px] lg:h-[350px] w-full drop-shadow-lg mb-5 lg:mb-0" 
+          className="object-contain h-[200px] lg:h-[350px] mb-5 lg:mb-0 w-auto drop-shadow-lg justify-self-start" 
           src={pictureMeTower} 
           alt=""
         />
-      </div>
+      </AboutSection>
     </PageLayout>
   )
 }

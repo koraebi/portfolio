@@ -107,7 +107,6 @@ export default function HomePage() {
           place-items-center 
           lg:justify-center
           flex flex-col lg:flex-row 
-          w-full 
           p-5 lg:py-10 lg:px-40 
           text-center lg:text-left">
         {Pages.map((page: string) => (

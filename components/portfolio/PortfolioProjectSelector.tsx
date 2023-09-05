@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
 import PortfolioProjectTile from '@/components/portfolio/PortfolioProjectTile';
 import PortfolioInsightTile from '@/components/portfolio/PortfolioInsightTile';
 
@@ -12,8 +11,6 @@ type Props = {
 };
 
 export default function PortfolioProjectSelector({ projects, section, onProjectSelected}: Props) {
-  const t = useTranslations('portfolio');
-  
   const [projectsStyle, setProjectsStyle] = useState({
     opacity: 'opacity-0',
     transition: ''
@@ -41,14 +38,14 @@ export default function PortfolioProjectSelector({ projects, section, onProjectS
         ${projectsStyle.opacity}
         ${projectsStyle.transition}`}
     >
-      {projects.map((project, index) => {
+      {projects.map(project => {
         if (section === 'projects') {
           return (
             <PortfolioProjectTile 
-              key={index} 
+              key={project.name} 
               name={project.name} 
               picture={project.picture} 
-              categories={project.categories.map(category => t(category.id))} 
+              categories={project.categories} 
               skills={project.skills}
               onClick={() => onProjectSelected(project.link)}
             />
@@ -57,10 +54,10 @@ export default function PortfolioProjectSelector({ projects, section, onProjectS
         if (section === 'insights') {
           return (
             <PortfolioInsightTile 
-              key={index} 
+              key={project.name} 
               name={project.name} 
               picture={project.picture} 
-              categories={project.categories.map(category => t(category.id))} 
+              categories={project.categories} 
               skills={project.skills}
               description={project.description}
               onClick={() => onProjectSelected(project.link)}

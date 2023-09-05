@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import React, { useState, useRef, useEffect, ChangeEvent, FormEvent } from 'react';
+import React, { useState, useRef, useEffect, FormEvent } from 'react';
 
 export default function ContactForm() {
   const t = useTranslations('contact');
@@ -39,7 +39,7 @@ export default function ContactForm() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-          subject: subjectRef.current,
+          subject: defaultSubject ?? subjectRef.current,
           message: messageRef.current + `\n\n${nameRef.current}.\n${fromRef.current}`
         }),
       });

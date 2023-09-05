@@ -39,7 +39,7 @@ export default function Portfolio() {
   };
 
   const onProjectSelected = (link: string): void => {
-    if (window.innerWidth >= 1024) {
+    if (window.innerWidth >= 1024 && link.includes('docs.google.com')) {
       setSelectedProject(link);
     } else {
       window.open(link, "_blank");
