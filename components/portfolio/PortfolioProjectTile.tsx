@@ -19,7 +19,7 @@ export default function PortfolioProjectTile({ name, picture, categories, skills
         rounded-2xl
         w-full min-w-[100px] h-[200px] lg:min-w-[200px] lg:h-[300px] 
         drop-shadow-lg 
-        ${categories[0].background}
+        ${categories.length ? categories[0].background : ''}
         bg-cover
         bg-no-repeat`}
       style={{ backgroundImage: `url(${picture})` }}
