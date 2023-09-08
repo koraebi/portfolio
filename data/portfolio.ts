@@ -95,7 +95,6 @@ export const Projects: PortfolioProject[] = [
     link: 'https://docs.google.com/presentation/d/e/2PACX-1vSDtViEljMu8jaCEy6ANrCG7ihRGlemUxc4xUeJBNQiMPce6psgvBgCO85K7Dyk3TpQEzrsAkRV6tM9/embed',
     description: '',
   },
-  /*
   {
     section: 'projects',
     name: 'ScrumTable',
@@ -104,7 +103,7 @@ export const Projects: PortfolioProject[] = [
     picture: '/interactiveTable.jpg',
     link: 'https://docs.google.com/presentation/d/e/2PACX-1vTd0C0L43bjgitlfH_Ai0bT-IxD9gsZSr0Sp-fFojH_R2KkX50AGC7kbonNssz6UKX6UTh0zwC5I4Lt/embed',
     description: '',
-  },*/
+  },
   {
     section: 'insights',
     name: "Tesla's Apples",
