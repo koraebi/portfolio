@@ -28,7 +28,7 @@ export default function ContactForm() {
 
   const submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (isSubmitting || isSubmitted || !messageRef.current || !nameRef.current || !fromRef.current || (!defaultSubject && !subjectRef.current)) return;
+    if (isSubmitting || isSubmitted || !messageRef.current || !nameRef.current || !fromRef.current) return;
     
     setIsSubmitting(true);
     
@@ -39,7 +39,7 @@ export default function ContactForm() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-          subject: defaultSubject ?? subjectRef.current.value,
+          subject: defaultSubject ?? (subjectRef.current && subjectRef.current.value),
           message: messageRef.current.value + `\n\n${nameRef.current.value}.\n${fromRef.current.value}`
         }),
       });
