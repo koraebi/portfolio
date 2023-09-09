@@ -28,7 +28,7 @@ export default function ContactForm() {
 
   const submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (isSubmitting || isSubmitted) return;
+    if (isSubmitting || isSubmitted || !messageRef.current || !nameRef.current || !fromRef.current) return;
     
     setIsSubmitting(true);
     
@@ -40,7 +40,7 @@ export default function ContactForm() {
         },
         body: JSON.stringify({ 
           subject: defaultSubject ?? subjectRef.current,
-          message: messageRef.current + `\n\n${nameRef.current}.\n${fromRef.current}`
+          message: messageRef.current.value + `\n\n${nameRef.current.value}.\n${fromRef.current.value}`
         }),
       });
 
