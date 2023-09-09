@@ -72,7 +72,7 @@ export const Projects: PortfolioProject[] = [
     section: 'projects',
     name: 'This Portfolio',
     categories: Categories.filter(category => ['webDevelopment'].includes(category.id)),
-    skills: ['React.js', 'Tailwind', 'Next.js', 'GCP'],
+    skills: ['React.js', 'Tailwind', 'Next.js', 'next-intl', 'Vercel'],
     picture: '',
     link: 'https://github.com/koraebi/portfolio',
     description: '',

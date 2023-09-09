@@ -15,6 +15,6 @@ Internationalization has been implemented for English and French with [next-intl
 
 ## Deployment
 
-The project deployment is seamlessly automated through Google Cloud Platform, utilizing Cloud Run and Cloud Build, directly from the source GitHub repository. This streamlined process ensures efficient and reliable deployment, reflecting my proficiency in leveraging cutting-edge cloud technologies for seamless project management.
+The project deployment is seamlessly automated through the Vercel platform.
 
 Open [https://www.koraebi.com](https://www.koraebi.com) with your browser to see the result.
