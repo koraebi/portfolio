@@ -7,7 +7,7 @@ import { ResumeLink } from '@/data/common';
 import Rbr from '@/components/Rbr';
 import Image from 'next/image';
 
-import pictureMeBoat from '/public/meBoat.jpeg';
+import pictureMe1 from '/public/me1.jpeg';
 import pictureMeLaptop from '/public/meLaptop.jpeg';
 import pictureMeTower from '/public/meTower.jpeg';
 import picturePartDesigner from '/public/partDesigner.png';
@@ -46,7 +46,7 @@ export default function About() {
         </SectionText>
         <Image 
           className="object-contain mb-5 lg:mb-0 h-[200px] lg:h-[350px] w-auto drop-shadow-lg" 
-          src={pictureMeBoat} 
+          src={pictureMe1} 
           alt=""
         />
       </AboutSection>
