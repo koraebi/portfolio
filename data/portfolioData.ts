@@ -97,7 +97,7 @@ export const PortfolioProjects: PortfolioProject[] = [
     categories: ['webDevelopment'],
     skills: ['Next.js', 'React', 'Tailwind', 'Redux Toolkit'],
     picture: '/spidermaps.png',
-    link: 'https://github.com/koraebi/portfolio',
+    link: '',
     description: 'Radar chart visualization of crypto pairs',
   },
   {

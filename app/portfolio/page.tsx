@@ -286,7 +286,7 @@ function ProjectTile({ project, onClick, t }: ProjectTileProps) {
     <div 
       className={`
         flex flex-col 
-        cursor-pointer 
+        ${project.link ? 'cursor-pointer' : ''} 
         rounded-2xl
         w-full min-w-[100px] h-[200px] lg:min-w-[200px] lg:h-[300px] 
         drop-shadow-lg 
@@ -294,7 +294,7 @@ function ProjectTile({ project, onClick, t }: ProjectTileProps) {
         bg-cover
         bg-no-repeat`}
       style={{ backgroundImage: `url(${project.picture})` }}
-      onClick={onClick}
+      onClick={() => project.link && onClick() }
     >
       <div className='bg-white mt-auto h-fit rounded-b-2xl p-3 lg:p-5'>
         <h1 className='font-extrabold mb-1 lg:mb-2 text-lg lg:text-xl'>
