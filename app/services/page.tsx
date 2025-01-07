@@ -4,7 +4,7 @@ import PageLayout from '@/layouts/PageLayout';
 import { CurrentLocation, ProfessionalServices } from '@/data/portfolioData';
 import useLocale from '@/hooks/useLocale';
 
-export const backgroundColors: any = {
+const backgroundColors: any = {
   fuchsia: 'bg-fuchsia-300',
   purple: 'bg-purple-300',
   indigo: 'bg-indigo-300',

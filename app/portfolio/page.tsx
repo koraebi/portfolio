@@ -10,7 +10,7 @@ import useLocale from '@/hooks/useLocale';
 import { Categories, Positions, Sections } from '@/models/enums';
 import { PortfolioCategory, PortfolioProject } from '@/models/interfaces';
 
-export const backgroundColors: any = {
+const backgroundColors: any = {
   cyan: 'bg-cyan-300',
   fuchsia: 'bg-fuchsia-300',
   purple: 'bg-purple-300',
