@@ -21,10 +21,10 @@ export async function POST(req: Request) {
       text: `Subject: ${emailData.subject}\n\n${emailData.message}`,
     };
 
-    const response = await transporter.sendMail(mailOptions);
-    console.log(response);
-    return new Response('Email sent successfully', { status: 200 });
+    await transporter.sendMail(mailOptions);
+
+    return new Response(JSON.stringify({ message: 'Email sent successfully'}), { status: 200 });
   } catch (error) {
-    return new Response('Failed to send email', { status: 500 });
+    return new Response(JSON.stringify({ message: 'Failed to send email' }), { status: 500 });
   }
 }

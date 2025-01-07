@@ -6,13 +6,12 @@ export const portfolioApi = createApi({
     baseUrl: '/',
   }),
   endpoints: (build) => ({
-    sendEmail: build.mutation<string, EmailData>({
+    sendEmail: build.mutation<any, EmailData>({
       query: (data) => ({ 
         url: `api/email`,
         method: 'POST',
         body: data,
       }),
-      transformErrorResponse: (response: { status: string | number }) => response.status,
     }),
   }),
 });

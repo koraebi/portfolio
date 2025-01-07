@@ -36,8 +36,8 @@ export default function Contact() {
   };
 
   useEffect(() => {
-    if (sendingEmailError) {
-      alert(sendingEmailError);
+    if (!emailSent && sendingEmailError) {
+      alert(JSON.stringify(sendingEmailError));
     }
   }, [sendingEmailError]);
 
