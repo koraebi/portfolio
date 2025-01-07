@@ -8,7 +8,7 @@ export default function EmbedPreview({ horizontal, link, onClose } : Props) {
   return (
     <div>
       <div
-        className="
+        className='
           absolute 
           z-20 
           h-full 
@@ -18,7 +18,7 @@ export default function EmbedPreview({ horizontal, link, onClose } : Props) {
           top-0 
           bottom-0 
           bg-black 
-          bg-opacity-70"
+          bg-opacity-70'
           onClick={onClose}
       >
       </div>

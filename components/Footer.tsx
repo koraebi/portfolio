@@ -1,25 +1,21 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
-import { Languages } from '@/data/common';
 import Socials from '@/components/Socials';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Footer() {
-  const pathname = usePathname().replace(new RegExp(`\\/(${Languages.join('|')})($|\\/)`, 'i'), '/'); 
-
   return (
-    <footer className="
+    <footer className='
       flex flex-col lg:flex-row 
       justify-center 
       text-center 
       mt-auto 
       text-xs text-gray-900 
       p-5 
-      gap-3"
+      gap-3'
     >
-      <div className="block lg:hidden flex flex-col gap-3">
-        <LanguageSwitcher pathname={pathname} languages={Languages}/>
+      <div className='lg:hidden flex flex-col gap-3'>
+        <LanguageSwitcher/>
         <Socials/>
       </div>
       <p>

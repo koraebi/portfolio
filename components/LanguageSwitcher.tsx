@@ -1,37 +1,27 @@
 'use client';
 
-import { useLocale } from 'next-intl';
-import { useRouter } from 'next/navigation';
+import useLocale from '@/hooks/useLocale';
+import { Locales } from '@/models/enums';
 
-export default function LanguageSwitcher({ 
-    pathname, 
-    languages 
-  }: { 
-    pathname: string, 
-    languages: string[] 
-  }) {
-  const currentLocale = useLocale();
-  const router = useRouter();
+const avaiableLocales: Locales[] = [Locales.English, Locales.French];
+
+export default function LanguageSwitcher() {
+  const { setLocale, locale: currentLocale } = useLocale();
   
-  const switchLocale = (locale: string) => {
-    router.replace(`/${locale}/${pathname}`);
-    router.refresh();
-  }
-
   return (
     <div className="flex justify-center gap-5 uppercase text-base">
-    {languages.map(language => { return (
+    {avaiableLocales.map(locale => (
       <div 
-        key={language} 
+        key={locale} 
         className={`
-          ${language === currentLocale ? 'text-gray-800' : 'text-gray-400'}
+          ${locale === currentLocale ? 'text-gray-800' : 'text-gray-400'}
           cursor-pointer
         `}
-        onClick={() => switchLocale(language)}
+        onClick={() => setLocale(locale)}
       >
-        {language}
+        {locale.toUpperCase()}
       </div>
-    )})}
+    ))}
     </div>
   );
 }
