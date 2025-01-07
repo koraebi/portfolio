@@ -1,8 +1,17 @@
 'use client';
 
 import PageLayout from '@/layouts/PageLayout';
-import { BackgroundColors, CurrentLocation, ProfessionalServices } from '@/data/portfolioData';
+import { CurrentLocation, ProfessionalServices } from '@/data/portfolioData';
 import useLocale from '@/hooks/useLocale';
+
+export const backgroundColors: any = {
+  fuchsia: 'bg-fuchsia-300',
+  purple: 'bg-purple-300',
+  indigo: 'bg-indigo-300',
+  blue: 'bg-blue-300',
+  teal: 'bg-teal-300',
+  violet: 'bg-violet-300'
+};
 
 export default function Services() {
   const { t } = useLocale();
@@ -26,7 +35,7 @@ export default function Services() {
               p-5 
               gap-6 
               text-center 
-              ${BackgroundColors[service.background]}
+              ${backgroundColors[service.background]}
               rounded-2xl`}
           >
             <section>

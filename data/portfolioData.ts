@@ -12,18 +12,6 @@ export const ResumeLink: any = {
   en: "https://docs.google.com/document/d/e/2PACX-1vQ-cpPoMSBpXKBsIOQC0ADJHeB7jQuEooln5YVSBHTN7H-KdmmxbapLYsDkMhpmRSTAw9RaWulecHP7/pub"
 };
 
-export const BackgroundColors: any = {
-  cyan: 'bg-cyan-300',
-  fuchsia: 'bg-fuchsia-300',
-  purple: 'bg-purple-300',
-  indigo: 'bg-indigo-300',
-  blue: 'bg-blue-300',
-  green: 'bg-green-300',
-  teal: 'bg-teal-300',
-  yellow: 'bg-yellow-300',
-  violet: 'bg-violet-300'
-};
-
 export const PortfolioCategories: PortfolioCategory[] = [
   {
     id: Categories.All,

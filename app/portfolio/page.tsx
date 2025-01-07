@@ -3,12 +3,24 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import PageLayout from '@/layouts/PageLayout';
-import { PortfolioProjects, PortfolioCategories, BackgroundColors } from '@/data/portfolioData';
+import { PortfolioProjects, PortfolioCategories } from '@/data/portfolioData';
 import EmbedPreview from '@/components/EmbedPreview';
 import ScrollButton from '@/components/ScrollButton';
 import useLocale from '@/hooks/useLocale';
 import { Categories, Positions, Sections } from '@/models/enums';
 import { PortfolioCategory, PortfolioProject } from '@/models/interfaces';
+
+export const backgroundColors: any = {
+  cyan: 'bg-cyan-300',
+  fuchsia: 'bg-fuchsia-300',
+  purple: 'bg-purple-300',
+  indigo: 'bg-indigo-300',
+  blue: 'bg-blue-300',
+  green: 'bg-green-300',
+  teal: 'bg-teal-300',
+  yellow: 'bg-yellow-300',
+  violet: 'bg-violet-300'
+};
 
 export default function Portfolio() {
   const { t } = useLocale();
@@ -323,7 +335,7 @@ function CategoryTile({ category, isSelected, t }: CategoryTileProps) {
         h-[100px] lg:h-[150px] 
         bg-no-repeat 
         bg-cover
-        ${BackgroundColors[category.background]}
+        ${backgroundColors[category.background]}
       `}
       style={{ 
         backgroundImage: category.picture && `url(${category.picture})`,
