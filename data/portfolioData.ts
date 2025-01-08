@@ -139,7 +139,7 @@ export const PortfolioProjects: PortfolioProject[] = [
   {
     section: Sections.Projects,
     name: 'ScrumTable',
-    categories: ['uxEngineering'],
+    categories: ['uxEngineering', 'mobileDevelopment'],
     skills: ['Angular', 'React Native', 'NestJS', 'Adobe XD'],
     picture: '/interactiveTable.jpg',
     link: '',
