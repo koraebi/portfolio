@@ -121,7 +121,7 @@ export const PortfolioProjects: PortfolioProject[] = [
   {
     section: Sections.Projects,
     name: 'Real-time Leaderboard',
-    categories: ['webDevelopment', 'apiDevelopment'],
+    categories: ['webDevelopment'],
     skills: ['Express.js', 'React', 'Redux', 'Jest', 'MUI', 'Socket.IO'],
     picture: '/leaderboard.png',
     link: 'https://github.com/koraebi/ta-leaderboard',
