@@ -186,7 +186,7 @@ export const ProfessionalServices: ProfessionalService[] = [
   {
     name: 'uxDesigner',
     background: 'blue',
-    price: 400,
+    price: 300,
     remoteOnly: false,
     period: ['shortTerm'],
     proficiencies: ['User Research', 'User Centered Design', 'Usability Engineering', 'Privacy By Design', 'Blender 3D', 'Adobe Illustrator', 'Adobe Substance Painter', 'Adobe XD', 'Figma'],
