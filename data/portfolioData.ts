@@ -96,15 +96,6 @@ export const PortfolioProjects: PortfolioProject[] = [
   },
   {
     section: Sections.Projects,
-    name: 'moon2bmt.vercel.app',
-    categories: ['webDevelopment'],
-    skills: ['Next.js', 'React', 'Tailwind', 'Redux Toolkit', 'DEX Screener API'],
-    picture: '/moon2bmt.png',
-    link: 'https://moon2bmt.vercel.app/',
-    description: 'Radar chart visualization of crypto pairs',
-  },
-  {
-    section: Sections.Projects,
     name: 'www.spidermaps.io',
     categories: [Categories.WebDevelopment],
     skills: ['Next.js', 'React', 'Tailwind', 'Redux Toolkit'],
