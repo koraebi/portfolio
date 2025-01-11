@@ -9,28 +9,20 @@ export default function EmbedPreview({ horizontal, link, onClose } : Props) {
     <div>
       <div
         className='
-          absolute 
+          inset-0
           z-20 
-          h-full 
-          w-full 
-          left-0 
-          right-0 
-          top-0 
-          bottom-0 
           bg-black 
+          fixed
           bg-opacity-70'
           onClick={onClose}
       >
       </div>
       <iframe 
         className={`
-          absolute 
+          fixed 
           z-30 
           m-auto
-          left-0 
-          right-0
-          bottom-0
-          top-0
+          inset-0
           ${horizontal ? 'w-[1000px] h-[600px]' : 'w-[542px] h-[800px]'}`}
         src={`${link}`}  
         allowFullScreen={true}

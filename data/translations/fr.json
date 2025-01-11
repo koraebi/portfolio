@@ -93,12 +93,18 @@
     "independentResearch": "Recherche Indépendante",
     "creativeConcepts": "Concepts Créatifs",
     "caseStudies": "Études de Cas",
-    "uxEngineering": "Ingénierie UX",
-    "uxUiDesign": "UX / UI Design",
-    "3dDesign": "Design 3D",
+    "uxUiDesign": "Design UX / UI ",
+    "3dDesign": "Design 2D / 3D",
     "webDevelopment": "Dev Web",
     "mobileDevelopment": "Dev Mobile",
-    "desktopDevelopment": "Dev Logiciel"
+    "desktopDevelopment": "Dev Logiciel", 
+    "projectDescriptionKoraebi": "This portfolio website made from scratch !",
+    "projectDescriptionSpidermaps": "Appreciation des cryptomonnaies par visualisation en diagramme de Kiviat.",
+    "projectDescriptionCoinify": "Intégration des paiements en cryptomonnaie avec Coinify pour Smood.ch.",
+    "projectDescriptionLeaderboard": "Évaluation technique d'une journée pour une fintech qui m'a embauché.",
+    "projectDescriptionTogethere": "Prototypage hi-fi d'une application mobile pour un business plan.",
+    "projectDescriptionScrumtable": "Solution ubiquitaire interactive  pour table, écran, smartphone et tablette.",
+    "projectDescriptionMoon2Bmt": "Dev rapide de 3h pour la simulation de migration du token de Bubblemaps."
   },
 
   "story": {

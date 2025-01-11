@@ -202,8 +202,9 @@ export default function Portfolio() {
       <hr className='h-px bg-gray-200 border-0'/>
       <div 
         className={`
-          grid lg:grid-cols-${selectedSection === Sections.Projects ? 3 : 2} gap-5 
+          grid grid-cols-1 2xl:grid-cols-2 
           grid-flow-row auto-rows-auto 
+          gap-5 
           py-5 lg:px-10 lg:pt-10
           ${projectsStyle.opacity}
           ${projectsStyle.transition}`}
@@ -285,29 +286,32 @@ function ProjectTile({ project, onClick, t }: ProjectTileProps) {
   return (
     <div 
       className={`
-        flex flex-col 
+        grid grid-rows-[60%_40%]
         ${project.link ? 'cursor-pointer' : ''} 
-        rounded-2xl
-        w-full min-w-[100px] h-[200px] lg:min-w-[200px] lg:h-[300px] 
-        drop-shadow-lg 
-        bg-center
-        bg-cover
-        bg-no-repeat`}
-      style={{ backgroundImage: `url(${project.picture})` }}
+        h-[350px] 
+        drop-shadow-md`}
       onClick={() => project.link && onClick() }
     >
-      <div className='bg-white mt-auto h-fit rounded-b-2xl p-3 lg:p-5'>
-        <h1 className='font-extrabold mb-1 lg:mb-2 text-lg lg:text-xl'>
-          {project.name}
+      <div 
+        className='rounded-t-2xl bg-clip-content bg-center bg-cover bg-no-repeat' 
+        style={{ backgroundImage: `url(${project.picture})` }}
+      />
+
+      <div className='flex flex-col justify-between bg-white rounded-b-2xl p-4 shadow-inner truncate overflow-ellipsis'>
+        <h1 className='font-extrabold text-lg lg:text-xl'>
+          {project.name}<span className='font-medium text-base'>{!project.link && ` (${t('comingSoon')})`}</span>
         </h1>
-        <p className='font-semibold line-clamp-1'>
+        <p className='font-normal text-sm mb-2 truncate'>
+          {t(project.description)}
+        </p>
+        <p className='font-semibold'>
           {project.categories.map((category: string, index: number) => (
             <span key={category}>
               {t(category)}{index !== project.categories.length - 1 && ' • '}
             </span>
           ))}
         </p>
-        <p className='font-normal text-sm line-clamp-1'>
+        <p className='font-normal text-sm truncate'>
           {project.skills.map((skill: string, index: number) => (
             <span key={skill}>
               {skill}{index !== project.skills.length - 1 && ' • '}
@@ -340,7 +344,7 @@ function CategoryTile({ category, isSelected, t }: CategoryTileProps) {
       style={{ 
         backgroundImage: category.picture && `url(${category.picture})`,
       }}>
-      <div className='flex flex-col p-3 mt-auto lg:p-5'>
+      <div className='p-3 mt-auto lg:p-5'>
         <h1 className='font-extrabold lg:text-xl'>
           {t(category.id)}
         </h1>
